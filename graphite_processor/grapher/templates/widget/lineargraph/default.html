@@ -1,0 +1,5 @@
+{% extends "widget/base.html" %}
+
+{% block content %}
+<img src="http://graphite1.dev.htfs.info/render/?width=586&amp;height=308{% for line in widget.graph.line_set.all %}&amp;target={{ line.series.target }}{% endfor %}" />
+{% endblock %}
